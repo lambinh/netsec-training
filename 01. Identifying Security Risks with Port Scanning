@@ -1,0 +1,48 @@
+# Identifying Security Risks with Port Scanning
+
+## Introduction
+Port scanning is a popular method used by network administrators and security professionals to identify open ports and services in a network. By scanning the top high-risk ports, you can identify potential security vulnerabilities that an attacker might exploit.
+
+## What are High Risk Ports?
+Some ports are deemed high-risk because they are commonly used by popular services that have been the targets of attackers. These ports can include:
+
+TCP 20, 21: FTP (File Transfer Protocol)
+TCP 22: SSH (Secure Shell)
+TCP 23: Telnet
+TCP 25: SMTP (Simple Mail Transfer Protocol)
+TCP 53: DNS (Domain Name System)
+TCP 80, 443: HTTP/HTTPS (Hypertext Transfer Protocol)
+TCP 110: POP3 (Post Office Protocol)
+TCP 143: IMAP (Internet Message Access Protocol)
+UDP 161: SNMP (Simple network management protocol)
+TCP 179: BGP (Border Gateway Protocol) 
+TCP 445: Microsoft SMB (Server Message Block)
+TCP/UDP 3389: Microsoft RDP (Remote Desktop Protocol)
+
+## Identifying Risks through Port Scanning
+Port scanning can help you identify security risks associated with these ports.
+
+Step 1: Choose a Port Scanning Tool
+
+There are numerous port scanning tools available. One of the most popular is Nmap ("Network Mapper"). This open-source tool is reliable, flexible, and powerful, offering a variety of scanning techniques.
+
+Step 2: Conduct a Port Scan
+
+Use your chosen port scanner to conduct a scan on your target network. For example, with Nmap, you would use a command like: nmap -p 1-65535 <target IP address>
+
+Step 3: Analyze the Results
+
+Examine the results of the port scan to determine which ports are open and which services are running on those ports.
+
+## Responding to Risks
+After identifying potential risks, you should take appropriate measures to mitigate them:
+
+Close unnecessary ports: If a port is open but not needed, it should be closed.
+Update software: Ensure that all software running on open ports is updated to the latest version to patch any known vulnerabilities.
+Implement firewalls: Use firewalls to control the flow of traffic to and from your network.
+Employ Intrusion Detection Systems (IDS): IDS can help detect suspicious activities on your network.
+Use strong authentication methods: For services like SSH, use strong authentication methods and consider using key-based authentication instead of passwords.
+Continuous Monitoring
+Port scanning should be part of a regular, ongoing process of monitoring and managing the security of your network. Always stay informed about the latest security threats and vulnerabilities associated with network services and ports.
+
+Remember, the goal is not just to identify open ports but to understand the services running on these ports and ensure they are secure and managed correctly. This process will significantly enhance your ability to protect your ISP infrastructure against potential security threats.
