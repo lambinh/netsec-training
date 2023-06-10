@@ -6,7 +6,8 @@ NTT  developed  it  for  monitoring prefixes:
  - We  released  it  open-source  (BSD-3-Clause)    
    https://github.com/nttgin/BGPalerter 
   - It  works  in real time 
-  - It’s easy  to  use Includes auto configuration 
+  - It’s easy  to  use 
+  - Includes auto configuration 
   - No  data collection needed
 
 Self-configuring BGP monitoring tool, which allows you to monitor in  **real-time**  if:
