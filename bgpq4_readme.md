@@ -76,7 +76,50 @@
     make
     sudo make install
 	```
-# bgpq4 github page:
+
+## EXAMPLES
+
+### Juniper  
+IPv4 exact-match filter from AS-SET
+```
+$ bgpq4 -Jl AS23918-exact-in AS23918:AS-GLOBAL
+policy-options {
+replace:
+prefix-list AS23918-exact-in {
+.....
+ }
+}
+```
+IPv6 exact-match filter from AS-SET
+```
+$ bgpq4 -J6l AS23918v6-exact-in AS23918:AS-GLOBAL
+policy-options {
+replace:
+prefix-list AS23918v6-exact-in {
+.....
+ }
+}
+```
+### Cisco
+For Cisco we can use aggregation (-A) flag to make this prefix-filter more compact:
+
+ipv4 exact-match filter from AS-SET
+```
+$ bgpq4 -Al AS23918-in AS23918:AS-GLOBAL
+no ip prefix-list AS23918-in
+ip prefix-list AS23918-in permit 5.187.16.0/20
+....
+```
+
+ipv4 exact-match filter from AS-SET
+
+```
+$ bgpq4 -A6l AS23918v6-in AS23918:AS-GLOBAL
+no ipv6 prefix-list AS23918v6-in
+ipv6 prefix-list AS23918v6-in permit 2401:4700:3000::/48
+....
+
+## bgpq4 github page:
 
 [https://github.com/bgp/bgpq4](https://github.com/bgp/bgpq4)
 
